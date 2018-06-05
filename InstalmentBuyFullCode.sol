@@ -307,7 +307,7 @@ contract InstalmentBuyContract {
     }
 
     modifier lockState {
-        require(now - nextTimeStamp <0);
+        require(now < nextTimeStamp);
         _;
     }
 }
